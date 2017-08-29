@@ -5,10 +5,10 @@
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <meta charset="utf-8">
 
-    <title>CONTACT</title>
+    <title>CONTACT_WIP</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css\style2.css">
-    <link rel="stylesheet" href="css\ordered_list.css">
+
     <style type="text/css">
     html{
       /*background-color: #999;*/
@@ -18,7 +18,7 @@
       width: 600px;
       border: 5px solid #ccc;
       background-color: #afc8de;
-      margin: 50px auto;
+      margin: 20px auto;
       padding: 20px 0;
     }
 
@@ -35,11 +35,19 @@
     }
 
     input {
-      width: 250px;
+      width: 450px;
       height: 40px;
       margin: 0 0 0 20px;
       border-radius: 15px;
     }
+
+    button{
+    width: 450px;
+    height: 40px;
+    margin: 0 0 0 20px;
+    border-radius: 15px;
+    }
+
     fieldset{
       border: none;
       /*background-color: #f6f6f6;*/
@@ -47,10 +55,10 @@
     }
 
     form h4{
-      margin: 20px 0 0 30px
-      font: 24px sans-serif;
+      margin: 0 0 0 20px;
+      font: 17px sans-serif;
       color: #888;
-      font-weight:bold;
+      font-weight: bold;
     }
 
     </style>
@@ -58,43 +66,80 @@
 
   <body>
 
-<span class="header"><a class="btn-rounded-white" href="index.html">HOME </a>  ||  <a class="btn-rounded-white" href="zzAbout.html">ABOUT</a>  ||  <a class="btn-rounded-white" href="zzContact.html">CONTACT</a> || WELCOME TO <b>BRIAN MACDONALD'S</b> WEB PORTFOLIO</span>
+<div class="header"><a class="btn-rounded-white" href="index.html">HOME </a>  ||  <a class="btn-rounded-white" href="zzAbout.html">ABOUT</a>  ||  <a class="btn-rounded-white" href="zzContact.html">CONTACT</a> || WELCOME TO <b>BRIAN MACDONALD'S</b> WEB PORTFOLIO</div>
 
-    <h1>THIS PAGE IS HOW YOU CAN CONTACT BRIAN MACDONALD!</h1>
-
-    <div id="form-wrap">
-        <form action="SubDet.php" method="post"><!--Does not go anywhere-->
-          <fieldset>
-
-          <h1 style="margin: auto auto; text-align: center;"> Contact Brian!<br>Use the form below.</h1>
-
-            <label class="labelone" for="first-name">First Name:</label>
-            <input type="text" name="first-name" id="first-name">
-            <label class="labeltwo" for="last-name">Last Name:</label>
-            <input type="text" name="last-name" id="last-name">
-            <label class="labelthree" for="email">Email:</label>
-            <input type="text" name="email" id="emal">
-
-          </fieldset>
-          <fieldset>
-            <h4 style="margin: 0 0 0 20px">Send us an email!</h4>
-
-            <textarea style="margin: 0 0 0 20px;" cols="30" rows="10" placeholder="Enter a message here"></textarea><br>
-
-            <!--<a class="btn-rounded-white" type"submit">Send Email</a>
-            <a class="btn-rounded-white" type"reset">Reset Form</a>-->
-
-            <input class="SubmitBtn" type="submit" name="submit" value="Send Email (Just For Show)">
-            <input class="ResetBtn" type="reset" value="Reset Form">
+<h1 style="text-align: center;">THIS PAGE IS HOW YOU CAN CONTACT BRIAN MACDONALD!</h1>
 
 
+<div id="form-wrap">
 
-          </fieldset>
-        </form>
-    </div>
+    <form><!--<form action="SubDet.php" method="post">Does not go anywhere-->
 
-    <div style="height: 700px; background: white; width: 5px;> </div>"
+      <fieldset>
+
+
+      <h1 style="margin: auto auto; text-align: center;"> Contact Brian!<br>Use the form below.</h1>
+
+
+        <label class="labelone" for="first-name">First Name:</label>
+
+        <input type="text" name="first-name" id="first-name">
+
+        <label class="labeltwo" for="last-name">Last Name:</label>
+
+        <input type="text" name="last-name" id="last-name">
+
+        <label class="labelthree" for="email">Email:</label>
+
+        <input type="text" name="email" id="emal">
+
+
+      </fieldset>
+
+      <fieldset>
+
+<script>
+function reverseString()
+{
+    var str = document.getElementById("str").value;
+    // Step 1. Use the split() method to return a new array
+    var splitString = str.split(""); // var splitString = "hello".split("");
+    // ["h", "e", "l", "l", "o"]
+
+    // Step 2. Use the reverse() method to reverse the new created array
+    var reverseArray = splitString.reverse(); // var reverseArray = ["h", "e", "l", "l", "o"].reverse();
+    // ["o", "l", "l", "e", "h"]
+
+    // Step 3. Use the join() method to join all elements of the array into a string
+    var joinArray = reverseArray.join(""); // var joinArray = ["o", "l", "l", "e", "h"].join("");
+    // "olleh"
+    // "olleh"
+    document.getElementById("joinArray").innerHTML = joinArray;
+}
+
+</script>
+
+        <h4>Include a message! </h4>
+
+        <textarea type="text" id="str" style="margin: 0 0 0 20px;" cols="59" rows="7" placeholder="Enter your message here. (Clicking the 'Reverse Message' button returns your message in reverse order!)"></textarea><br>
+
+        <p id="joinArray"></p>
+<!--<input class="SubmitBtn" type="submit" name="submit" value="Send Email (No email is actually sent.)">-->
+        <button type="button" onclick="reverseString()">Reverse The Message</button><br><br>
+
+        <input class="ResetBtn" type="reset" value="Reset Form (Refresh page to clear reversed message)">
+
+      </fieldset>
+
+    </form>
+
+</div>
+
+
+
+<div style="height: 700px; background: white; width: 5px;"> </div>
 
   </body>
 
 </html>
+
